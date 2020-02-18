@@ -138,7 +138,13 @@ width: auto;
   justify-content: center;
 }
 .comment img{
-  display: block;
-  width: 10px;
+    width: 30px;
+    margin-right: 5px;
+}
+
+.comment {
+  display: flex;
+  align-items:flex-end;
+
 
 }
