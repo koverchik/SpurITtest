@@ -3,7 +3,7 @@
 @section('base')
 <header>
   <div class="customers">
-    <h1><a href="create.php">Создать задачу</a></h1>
+    <h1><a href="create">Создать задачу</a></h1>
   </div>
 </header>
      <main id="button_enter">
