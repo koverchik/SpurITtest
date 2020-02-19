@@ -1,6 +1,7 @@
     <a href="index.php"><img src="image/back.png" alt="back_button"/></a>
     <h1>Редактировать</h1>
-      <form id="form" method="get" action="presentation.php">
+      <form id="form" method="get" action="">
+        @csrf
         <div>
             <label for="status">Статус</label><input list="status"  name="status" form="form-deal">
             <datalist id="status">

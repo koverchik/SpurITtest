@@ -26,3 +26,5 @@ Route::get('/create', function () {
 Route::get('/redact', function () {
     return view('redact');
 });
+
+Route::post('/presentation', 'NoteController@save');

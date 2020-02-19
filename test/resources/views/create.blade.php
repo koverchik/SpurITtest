@@ -3,7 +3,9 @@
 @section('base')
 <a href="index"><img src="image/back.png" alt="back_button"/></a>
 <h1>Создать</h1>
-  <form id="form" method="get" action="presentation.php">
+
+  <form id="form" method="post" action="/presentation">
+    @csrf
     <div>
        <label for="name">Название</label><input type="text" name="name" required placeholder="">
     </div>
