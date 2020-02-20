@@ -14,16 +14,11 @@
        <ul>
   <?php
           $query = "SELECT tasks.name, tasks.description, tasks.id  FROM tasks WHERE tasks.id_status='1';";
-
           $result = $conn->query($query);
-
           while ($obj = $result->fetch_object()) {
           printf ("<li class=\"create\"> <a href=\"redact.php?id=$obj->id\"> $obj->name</a> <div>$obj->description</div><div class=\"comment\">	<img src=\"image/comment.png\"/>
             <p>1</p></div></li>");
-      }
-
-
-          ?>
+          }?>
     </ul>
 </div>
 

@@ -15,7 +15,7 @@
       <div>
           <label for="status">Статус</label><input list="status"  name="status" form="form">
           <datalist id="status">
-            <option value="1">TODO</option>
+            <option selected value="1">TODO</option>
             <option value="2">DOING</option>
             <option value="3">DONE</option>
         </datalist>
