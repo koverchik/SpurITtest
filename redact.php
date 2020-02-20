@@ -19,9 +19,9 @@ $result = $conn->query($query);
 
         }?>
 
-  <form id="form" method="post" action="handlers/redact.php">
+  <form id="form" method="get" action="handlers/redact.php">
       <div>
-        <label for="status">Статус</label><input list="status"  name="status" form="form-deal">
+        <label for="status">Статус</label><input list="status" name="status" form="form">
         <datalist id="status">
           <option value="1" <?php if($id_status==1){echo"selected";};?>>TODO</option>
           <option value="2" <?php if($id_status==2){echo"selected";};?>>DOING</option>
@@ -29,12 +29,12 @@ $result = $conn->query($query);
       </datalist>
     </div>
     <div>
-       <label for="name">Название</label><input type="text" name="name" value="<?php printf("$name");?>" required placeholder="" >
+       <label for="name">Название</label><input type="text" name="name" form="form" value="<?php printf("$name");?>" required >
     </div>
     <div>
-        <label for="note">Описание</label><input type="text" name="note" value="<?php printf("$description");?>" form="form-presentation" ></textarea><br>
+        <label for="note">Описание</label><input type="text" name="note" value="<?php printf("$description");?>" form="form" ></textarea><br>
     </div>
-
+     <input type="hidden" name="id" value="<?php printf("$id");?>">
     <div>
       <input id="button-send" type=submit value="Изменить">
     </div>
