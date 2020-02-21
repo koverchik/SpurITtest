@@ -10,7 +10,7 @@
   </header>
   <main id="button_enter">
     <div>
-      <h2>TODO step 1</h2>
+      <h2>TODO step 1 -> </h2>
        <ul>
   <?php
           $query = "SELECT tasks.name, tasks.description, tasks.id  FROM tasks WHERE tasks.id_status='1';";
@@ -25,7 +25,7 @@
 </div>
 
 				<div>
-					<h2>DOING step 2</h2>
+					<h2>DOING step 2 -></h2>
 					<ul>
             <?php   $query = "SELECT tasks.name, tasks.description, tasks.id  FROM tasks WHERE tasks.id_status='2';";
                     $result = $conn->query($query);

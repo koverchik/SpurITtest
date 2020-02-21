@@ -41,6 +41,36 @@ $result = $conn->query($query);
 
   </form>
 
+<div id="form">
+  <div class="comment">
+    <div>
+      <h2>Комментарии к задаче:</h3>
+    </div>
+    <img src="image/comment.png" alt="comment"/>
+    <h3>
+      <?php
+          $comment_num = "SELECT COUNT(1) FROM comments WHERE comments.id='$id';";
+          $comment = $conn->query($comment_num);
+          $row = $comment->fetch_row();
+          echo $row[0];?>
+      </h3>
+
+  </div>
+
+
+    <?php
+    $comment = "SELECT comments.text FROM comments WHERE comments.id='$id';";
+    $result_comment = $conn->query($comment);
+        while ($obj_comment = $result_comment->fetch_object()) {
+              $text = $obj_comment->text;
+              printf("<div>$text</div>");}
+         ?>
+
+
+
+
+</div>
+
 
   <form method="post" action="handlers/comment.php" id="form">
     <div>
@@ -49,9 +79,7 @@ $result = $conn->query($query);
     </div>
 
     <input type="hidden" name="id" value="<?php printf("$id");?>">
-
     <div class="comment">
-      <img src="image/comment.png" alt="comment"/>
       <input id="button-send" type=submit value="Добавить комментарий">
     </div>
   </form>
