@@ -38,10 +38,26 @@ $result = $conn->query($query);
     <div>
       <input id="button-send" type=submit value="Изменить">
     </div>
+
+  </form>
+
+
+  <form method="post" action="handlers/comment.php" id="form">
     <div>
+       <label for="boby_comment">Новый комментарий</label>
+       <input type="text" name="boby_comment" required>
+    </div>
+
+    <input type="hidden" name="id" value="<?php printf("$id");?>">
+
+    <div class="comment">
+      <img src="image/comment.png" alt="comment"/>
       <input id="button-send" type=submit value="Добавить комментарий">
     </div>
   </form>
+
+
+
 
   </body>
 

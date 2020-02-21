@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<?php require_once '../header.php'?>
+<?php require_once 'header.php'?>
 
 <body>
   <header>
-
-		<div class="customers">
+    <a href="../index.php"><img src="../image/back.png" alt="back_button"/></a>
+  </header>
+  <main id="button_enter">
+		<div>
       <?php
         require_once 'login.php';
         require_once 'connection.php'?>
@@ -18,12 +20,9 @@
       $result = $conn->query($query);
       ?>
 <h1>Задача с названием &laquo;<?php echo "$name";?>&raquo; изменена </h1>
- <a href="../index.php"><img src="../image/back.png" alt="back_button"/></a>
+
 		</div>
-
-
-  </header>
-
+</main>
 </body>
 
 </html>
