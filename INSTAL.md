@@ -6,18 +6,12 @@
 ## Steps:
 * Download the contents of the repository
 * Create an empty database
-* Import data into an empty database
-* Follow the link https: //localhost/SpurITtest/index.php *
-
-## Steps:
-* Download the contents of the repository
-* Create an empty database
 * Import data from the file "dump.sql" into an empty database
 * Make changes to the file "login.php" (SpurITtest / handlers / login.php)
-   $ hn = 'localhost'; localhost - your host name
-   $ db = 'nameDB'; nameDB - database name
-   $ un = 'userNAME'; userNAME - Username
-   $ pw = 'passwordDB'; passwordDB - user password for database
+  * $ hn = 'localhost'; localhost - your host name
+  * $ db = 'nameDB'; nameDB - database name
+  * $ un = 'userNAME'; userNAME - Username
+  * $ pw = 'passwordDB'; passwordDB - user password for database
 * Follow the link https: //localhost/SpurITtest/index.php *
 
 
