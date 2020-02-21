@@ -1,6 +1,6 @@
 <?php // login.php
   $hn = 'localhost';
-  $db = 'nameDB';
-  $un = 'userNAME';
-  $pw = 'passwordDB';
+  $db = 'spur';
+  $un = 'helga';
+  $pw = 'Helga!Koverchik1993';
 ?>
