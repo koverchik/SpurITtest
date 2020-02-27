@@ -146,6 +146,8 @@ width: auto;
 .comment {
   display: flex;
   align-items:flex-end;
+}
 
-
+.trash img{
+  width: 40px;
 }

@@ -18,7 +18,8 @@
           while ($obj = $result->fetch_object()) {
             $id = $obj->id;
 
-          printf ("<li class=\"create\"> <a href=\"redact.php?id=$obj->id\"> $obj->name</a> <div>$obj->description</div></li>");
+          printf ("<li class=\"create\"> <a href=\"redact.php?id=$obj->id\"> $obj->name</a> <div>$obj->description</div><div class='trash'><img src='image/trash.png'/>
+          </div></li>");
 
           }?>
     </ul>
