@@ -29,7 +29,7 @@ $(document).ready(function()
           if(request.readyState === 4 && request.status === 200) {
             $(".create.active").remove();
             $(".delivery.active").remove();
-            $("in_work").remove();
+            $(".in_work.active").remove();
             warning.style.display = "none";
           }
         });
