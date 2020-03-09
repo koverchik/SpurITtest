@@ -14,6 +14,9 @@
       $name = $_GET["name"];
       $note = $_GET["note"];
       $status = $_GET["status"];
+			if(empty($status)){
+				$status = 1;
+			}
       $query = "INSERT INTO tasks(name, description, id_status) VALUES ('$name', '$note', '$status');";
       $result = $conn->query($query);
 

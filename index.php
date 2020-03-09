@@ -18,7 +18,7 @@
           while ($obj = $result->fetch_object()) {
             $id = $obj->id;
 
-          printf ("<li class=\"create\"> <a href=\"redact.php?id=$obj->id\"> $obj->name</a> <div>$obj->description</div><div class='trash'><img src='image/trash.png'/>
+          printf ("<li class=\"create\"> <a href=\"redact.php?id=$obj->id\"> $obj->name</a> <div>$obj->description</div><div class='trash' id=\"$obj->id\"><img src='image/trash.png'/>
           </div></li>");
 
           }?>
@@ -31,7 +31,7 @@
             <?php   $query = "SELECT tasks.name, tasks.description, tasks.id  FROM tasks WHERE tasks.id_status='2';";
                     $result = $conn->query($query);
                     while ($obj = $result->fetch_object()) {
-                    printf ("<li class=\"in_work\"> <a href=\"redact.php?id=$obj->id\"> $obj->name</a> <div>$obj->description</div></li>");}?>
+                    printf ("<li class=\"in_work\"> <a href=\"redact.php?id=$obj->id\"> $obj->name</a> <div>$obj->description</div><div class='trash' id=\"$obj->id\"><img src='image/trash.png'/></div></li>");}?>
 
 					</ul>
 				</div>
@@ -41,10 +41,12 @@
             <?php   $query = "SELECT tasks.name, tasks.description, tasks.id  FROM tasks WHERE tasks.id_status='3';";
                     $result = $conn->query($query);
                     while ($obj = $result->fetch_object()) {
-                    printf ("<li class=\"delivery\"> <a href=\"redact.php?id=$obj->id\"> $obj->name</a> <div>$obj->description</div></li>");}?>
+                    printf ("<li class=\"delivery\"> <a href=\"redact.php?id=$obj->id\"> $obj->name</a> <div>$obj->description</div><div class='trash' id=\"$obj->id\"><img src='image/trash.png'/></div></li>");}?>
 
 					</ul>
 				</div>
       </main>
     </body >
+
+
     </html>
