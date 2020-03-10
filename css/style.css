@@ -30,14 +30,17 @@ li{
 .create{
 background: #ffc309;
 border: 0px;
+border-bottom: 1px solid grey;
 }
 
 .in_work{
 background:#e45f00;
+border-bottom: 1px solid grey;
 }
 
 .delivery{
 background: #e42e00;
+border-bottom: 1px solid grey;
 }
 
 .customers{
@@ -151,8 +154,13 @@ width: auto;
 
 .trash img{
   width: 40px;
+  margin: 5px;
 }
+.trash img:hover{
+  width: 50px;
+  margin: 0px;
 
+}
 #warning{
   background: #BFB8A3;
   position: absolute;
@@ -172,4 +180,9 @@ width: auto;
   padding: 5px;
   font-family: 'Neucha', cursive;
   font-size: 12pt;
+}
+
+.in_work div, .create div, .delivery div{
+margin:0px 20px;
+
 }
